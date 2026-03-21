@@ -29,8 +29,8 @@ Doors open at 17:30 for refreshments; the formal programme runs from 18:15 to 21
 
 Accessibility: step-free access via the east entrance; please email us if you need reserved seating.`,
     images: [
-      'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200',
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200',
+      '',
+      '',
     ],
     tags: ['Culture', 'Community', 'Evening'],
     location: 'Main Hall, Oxford Brookes University',
@@ -48,7 +48,7 @@ Accessibility: step-free access via the east entrance; please email us if you ne
 The judges highlighted our peer-support initiatives, cultural programming, and collaboration with other societies on campus-wide events. This recognition belongs to every member who volunteered, attended, or helped spread the word.
 
 Thank you to our committee, faculty supporters, and partners who made this possible. We will use the award grant to fund two additional workshops this term.`,
-    images: ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200'],
+    images: [''],
     tags: ['Award', 'Students’ Union', 'Recognition'],
     location: 'Oxford Brookes University',
   },
@@ -64,7 +64,7 @@ Thank you to our committee, faculty supporters, and partners who made this possi
 The format was simple: short sector-based tables for the first hour, then open mingling. Several members secured follow-up coffee chats and one internship conversation is already in progress.
 
 Slides and a contact sheet (opt-in) were shared with attendees after the event.`,
-    images: ['https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200'],
+    images: [''],
     tags: ['Careers', 'Networking'],
     location: 'Innovation Lab, Headington Campus',
   },
@@ -95,7 +95,7 @@ A full receipt summary is available on request from the committee. Planning for 
 Committee members will run a short welcome session at 13:00 covering how to join working groups, Discord, and our buddy scheme for new arrivals.
 
 Rain plan: we will relocate to the Student Union ground-floor social space—check Instagram stories on the day.`,
-    images: ['https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200'],
+    images: [''],
     tags: ['Social', 'Outdoors', 'Welcome'],
     location: 'University Park, Oxford Brookes',
   },
@@ -126,7 +126,7 @@ If the table is full, we sometimes spill to the café; check the society WhatsAp
 Attendance was capped at 80; we are exploring a repeat screening next term with open captions for a wider audience.
 
 Thanks to the Film Society for technical support and to our guest for joining remotely.`,
-    images: ['https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200'],
+    images: [''],
     tags: ['Film', 'Culture'],
     location: 'Cinema Hall, Oxford Brookes',
   },
@@ -157,7 +157,7 @@ This partnership does not replace our existing SU activities—it extends our re
 Resources (Miro board and reading list) were shared by email to participants.
 
 We plan a follow-up session on fundraising and grant writing in Hilary term.`,
-    images: ['https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200'],
+    images: [''],
     tags: ['Workshop', 'Startups'],
     location: 'Business School, Oxford Brookes',
   },
