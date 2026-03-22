@@ -191,10 +191,6 @@ export default function Hero() {
                   <div className="mb-3 transform text-5xl transition-transform duration-500 group-hover:scale-110 sm:mb-4 sm:text-6xl md:text-7xl">
                     🌻
                   </div>
-                  <p className="mb-1 font-display text-base font-semibold text-primary-700 sm:text-lg md:text-xl">
-                    Community Image
-                  </p>
-                  <p className="text-xs text-primary-600 sm:text-sm">Replace with your hero photo</p>
                 </div>
 
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

@@ -129,37 +129,6 @@ export default function CommunityPage() {
           </div>
         </div>
       </section>
-
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-16 text-center">
-            <h2 className="font-display mb-4 text-4xl font-bold md:text-5xl">
-              Connect With <span className="text-accent-400">Us</span>
-            </h2>
-            <p className="text-lg text-blue-100">Join our community on your favorite platforms</p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {communitySocials.map((social) => (
-              <a
-                key={social.platform}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl border border-white/20 bg-white/10 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
-              >
-                <div
-                  className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ${social.gradient} text-4xl transition-transform group-hover:scale-110`}
-                >
-                  {social.icon}
-                </div>
-                <h3 className="font-display mb-2 text-xl font-bold">{social.platform}</h3>
-                <p className="text-sm text-blue-100">{social.handle}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
