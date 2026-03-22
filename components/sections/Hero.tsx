@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import Link from 'next/link'
+import { CalendarDays, UsersRound } from 'lucide-react'
 import { JOIN_COMMUNITY_URL } from '@/lib/constants'
 import { isMobileViewport, prefersReducedMotion } from '@/lib/viewport'
 
@@ -165,7 +166,7 @@ export default function Hero() {
                   className={`cta-button btn-primary w-full px-6 py-3.5 text-base sm:w-auto sm:px-8 sm:py-4 sm:text-lg ${ctaInit}`}
                 >
                   Join Community
-                  <span className="ml-2">🌻</span>
+                  <UsersRound className="ml-2 h-5 w-5 shrink-0 opacity-95" strokeWidth={2} aria-hidden />
                 </button>
               </Link>
               <Link href="/events" className="w-full sm:w-auto">
@@ -174,7 +175,7 @@ export default function Hero() {
                   className={`cta-button btn-secondary w-full px-6 py-3.5 text-base sm:w-auto sm:px-8 sm:py-4 sm:text-lg ${ctaInit}`}
                 >
                   Explore Events
-                  <span className="ml-2">🎉</span>
+                  <CalendarDays className="ml-2 h-5 w-5 shrink-0 opacity-95" strokeWidth={2} aria-hidden />
                 </button>
               </Link>
             </div>

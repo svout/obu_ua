@@ -11,7 +11,7 @@ export function HomeCta() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="font-display mb-4 text-2xl font-bold tracking-tight sm:mb-5 sm:text-3xl md:text-5xl">
+        <h2 className="font-display text-primary-100 mb-4 text-2xl font-bold tracking-tight sm:mb-5 sm:text-3xl md:text-5xl">
           Ready to join our community?
         </h2>
         <p className="mb-8 text-sm leading-relaxed text-primary-100 sm:mb-10 sm:text-base md:text-lg">

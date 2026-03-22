@@ -54,15 +54,15 @@ export default async function EventsPage({ searchParams }: EventsPageProps) {
         </Container>
       </section>
 
-      <section className="section-padding bg-gradient-to-br from-accent-500 to-accent-600 text-neutral-900">
+      <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-900 to-primary-950 text-primary-100">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <h2 className="font-display mb-6 text-4xl font-bold md:text-5xl">
+          <h2 className="font-display text-primary-100 mb-6 text-4xl font-bold md:text-5xl">
             Want to organise an event?
           </h2>
-          <p className="mb-8 text-xl text-neutral-800">
+          <p className="mb-8 text-xl text-white">
             Have an idea for the community? We&apos;d love to hear from you.
           </p>
-          <Button type="button" variant="primary" className="bg-white text-primary-600 shadow-xl">
+          <Button type="button" variant="primary" className="bg-white text-primary-900 shadow-xl">
             Propose an event
           </Button>
         </div>

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { Instagram, Linkedin, MessageCircle, Send } from 'lucide-react'
 import {
   CONTACT_EMAIL,
+  CREDIT_DEVELOPER_LINKEDIN_URL,
+  CREDIT_DEVELOPER_NAME,
   FOOTER_QUICK_LINKS,
   SITE_NAME,
   SITE_TAGLINE,
@@ -87,17 +89,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 text-sm text-neutral-900 md:flex-row">
-          <p suppressHydrationWarning>
-            © {year} Oxford Brookes Ukrainian Society. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="transition-colors hover:text-accent-400">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="transition-colors hover:text-accent-400">
-              Terms of Service
-            </Link>
+        <div className="mt-12 border-t border-neutral-200 pt-8 text-sm">
+          <div className="flex w-full flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
+            <p suppressHydrationWarning className="text-neutral-900">
+              © {year} Oxford Brookes Ukrainian Society. All rights reserved.
+            </p>
+            <p className="text-neutral-500">
+              Developed by{' '}
+              <a
+                href={CREDIT_DEVELOPER_LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-neutral-700 underline-offset-4 transition-colors hover:text-primary-700 hover:underline"
+              >
+                {CREDIT_DEVELOPER_NAME}
+              </a>
+            </p>
           </div>
         </div>
       </div>

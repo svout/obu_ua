@@ -25,3 +25,8 @@ export const FOOTER_QUICK_LINKS: NavItem[] = [
 ]
 
 export const CONTACT_EMAIL = 'contact@obuua.org'
+
+/** Подпись разработчика в футере — при наведении ссылка ведёт на LinkedIn */
+export const CREDIT_DEVELOPER_NAME = 'Ivan Kovalchuk'
+export const CREDIT_DEVELOPER_LINKEDIN_URL =
+  'https://www.linkedin.com/in/ivan-kovalchuk-42674a29a/'
