@@ -11,10 +11,9 @@ import { Logo } from '@/components/ui/Logo'
 type SocialLink = { name: string; href: string; Icon: typeof Instagram }
 
 const socialLinks: SocialLink[] = [
-  { name: 'Instagram', href: 'https://instagram.com', Icon: Instagram },
+  { name: 'Instagram', href: 'https://www.instagram.com/obu.ua/', Icon: Instagram },
   { name: 'Telegram', href: 'https://t.me', Icon: Send },
-  { name: 'Discord', href: 'https://discord.com', Icon: MessageCircle },
-  { name: 'LinkedIn', href: 'https://linkedin.com', Icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/oxford-brookes-ukrainian-society/', Icon: Linkedin },
 ]
 
 export function Footer() {

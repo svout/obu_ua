@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { gsap } from 'gsap'
 import Link from 'next/link'
+import { JOIN_COMMUNITY_URL } from '@/lib/constants'
 import { isMobileViewport, prefersReducedMotion } from '@/lib/viewport'
 
 /** Matches GSAP x/y/scale so first paint is already “hidden”, no flash before useEffect. */
@@ -152,7 +154,12 @@ export default function Hero() {
               ref={ctaRef}
               className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start"
             >
-              <Link href="/community" className="hidden md:inline-block">
+              <Link
+                href={JOIN_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-block"
+              >
                 <button
                   type="button"
                   className={`cta-button btn-primary w-full px-6 py-3.5 text-base sm:w-auto sm:px-8 sm:py-4 sm:text-lg ${ctaInit}`}

@@ -1,4 +1,5 @@
 import Link, { type LinkProps } from 'next/link'
+import type { AnchorHTMLAttributes, ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import type { ButtonVariant } from '@/components/ui/Button'
 
@@ -10,8 +11,8 @@ const variantClass: Record<ButtonVariant, string> = {
 export type ButtonLinkProps = LinkProps & {
   variant?: ButtonVariant
   className?: string
-  children: React.ReactNode
-}
+  children: ReactNode
+} & Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'target' | 'rel'>
 
 export function ButtonLink({
   variant = 'primary',

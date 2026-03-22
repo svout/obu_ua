@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight, Mail } from 'lucide-react'
+import { JOIN_COMMUNITY_URL } from '@/lib/constants'
 
 export function HomeCta() {
   return (
@@ -20,7 +21,9 @@ export function HomeCta() {
 
         <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
           <Link
-            href="/community"
+            href={JOIN_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-8 py-3.5 text-base font-semibold text-primary-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-neutral-50 sm:w-auto"
           >
             Join now

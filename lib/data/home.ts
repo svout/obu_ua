@@ -76,8 +76,8 @@ export type HomeStat = {
 }
 
 export const homeStats: HomeStat[] = [
-  { value: 150, label: 'Active Members', suffix: '+', icon: 'Users' },
-  { value: 45, label: 'Events This Year', suffix: '+', icon: 'CalendarDays' },
-  { value: 23, label: 'Student Projects', suffix: '', icon: 'Lightbulb' },
-  { value: 12, label: 'Partnerships', suffix: '', icon: 'Handshake' },
+  { value: 50, label: 'Active Members', suffix: '+', icon: 'Users' },
+  { value: 20, label: 'Events This Year', suffix: '+', icon: 'CalendarDays' },
+  { value: 5, label: 'Student Projects', suffix: '', icon: 'Lightbulb' },
+  { value: 7, label: 'Partnerships', suffix: '', icon: 'Handshake' },
 ]

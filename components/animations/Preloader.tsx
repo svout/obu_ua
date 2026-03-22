@@ -6,14 +6,20 @@ import { isMinMd, prefersReducedMotion } from '@/lib/viewport'
 
 const PETAL_COUNT = 13
 
+/** Десктоп: финальное состояние для измерения (подсолнух влево + текст на месте), без анимации */
+const DESKTOP_FINAL_SUNFLOWER = { x: -36, scale: 0.88 as number, autoAlpha: 1 as number }
+const DESKTOP_FINAL_LETTERS = { autoAlpha: 1 as number, x: 0 as number }
+
+const SLIDE_DURATION = 0.65
+const SLIDE_EASE = 'power3.inOut'
+
 export type PreloaderProps = {
   onFinish?: () => void
 }
 
 /**
- * Desktop (md+): как раньше — кластер по ширине подсолнуха, «OBU UA» в absolute справа,
- * сдвиг подсолнуха влево и появление текста слева направо.
- * Mobile: колонка по центру, текст появляется снизу без горизонтального слайда.
+ * Десктоп: один общий «slide» — подсолнух, появление OBU UA и сдвиг кластера для центрирования
+ * идут параллельно (одна длительность, один ease). Мобильная колонка — тоже параллельно где уместно.
  */
 export default function Preloader({ onFinish }: PreloaderProps) {
   const rootRef = useRef<HTMLDivElement>(null)
@@ -48,7 +54,7 @@ export default function Preloader({ onFinish }: PreloaderProps) {
 
     if (reduceMotion) {
       gsap.set(stage, { autoAlpha: 1 })
-      gsap.set(cluster, { autoAlpha: 1 })
+      gsap.set(cluster, { autoAlpha: 1, x: 0 })
       gsap.set(sunflowerStage, { autoAlpha: 1, scale: 1, x: 0, y: 0 })
       gsap.set(letters, { autoAlpha: 1, x: 0, y: 0 })
       gsap.set(petals, { scale: 1, rotation: 0 })
@@ -61,22 +67,43 @@ export default function Preloader({ onFinish }: PreloaderProps) {
       return () => tl.kill()
     }
 
-    gsap.set(stage, { autoAlpha: 1 })
-    gsap.set(cluster, { autoAlpha: 1 })
-    gsap.set(sunflowerStage, {
-      autoAlpha: 0,
-      scale: 0.55,
-      x: 0,
-      y: 0,
-      transformOrigin: 'center center',
-    })
-    if (isDesktop) {
-      gsap.set(letters, { autoAlpha: 0, x: 48, y: 0, transformOrigin: 'left center' })
-    } else {
-      gsap.set(letters, { autoAlpha: 0, x: 0, y: 24, transformOrigin: 'center center' })
+    const applyIntroInitial = () => {
+      gsap.set(stage, { autoAlpha: 1 })
+      gsap.set(cluster, { autoAlpha: 1, x: 0 })
+      gsap.set(sunflowerStage, {
+        autoAlpha: 0,
+        scale: 0.55,
+        x: 0,
+        y: 0,
+        transformOrigin: 'center center',
+      })
+      if (isDesktop) {
+        gsap.set(letters, { autoAlpha: 0, x: 48, y: 0, transformOrigin: 'left center' })
+      } else {
+        gsap.set(letters, { autoAlpha: 0, x: 0, y: 24, transformOrigin: 'center center' })
+      }
+      gsap.set(petals, { scale: 0, rotation: -180, transformOrigin: 'center center' })
+      if (center) gsap.set(center, { scale: 0, transformOrigin: 'center center' })
     }
-    gsap.set(petals, { scale: 0, rotation: -180, transformOrigin: 'center center' })
-    if (center) gsap.set(center, { scale: 0, transformOrigin: 'center center' })
+
+    applyIntroInitial()
+
+    /** Один раз: финальная геометрия → dx для кластера; затем снова intro (без мерцания до paint) */
+    let desktopClusterShift = 0
+    if (isDesktop) {
+      gsap.set(sunflowerStage, DESKTOP_FINAL_SUNFLOWER)
+      gsap.set(letters, DESKTOP_FINAL_LETTERS)
+      gsap.set(cluster, { x: 0 })
+      void cluster.offsetHeight
+      const sr = sunflowerStage.getBoundingClientRect()
+      const lr = letters.getBoundingClientRect()
+      const left = Math.min(sr.left, lr.left)
+      const right = Math.max(sr.right, lr.right)
+      const groupCenter = (left + right) / 2
+      const vr = root.getBoundingClientRect()
+      desktopClusterShift = vr.left + vr.width / 2 - groupCenter
+      applyIntroInitial()
+    }
 
     const tl = gsap.timeline({
       onComplete: () => {
@@ -103,23 +130,55 @@ export default function Preloader({ onFinish }: PreloaderProps) {
     tl.to({}, { duration: 0.5 })
 
     if (isDesktop) {
-      tl.to(sunflowerStage, {
-        x: -28,
-        scale: 0.88,
-        duration: 0.5,
-        ease: 'power2.inOut',
-      })
+      tl.add('slide')
+      tl.to(
+        sunflowerStage,
+        {
+          x: DESKTOP_FINAL_SUNFLOWER.x,
+          scale: DESKTOP_FINAL_SUNFLOWER.scale,
+          duration: SLIDE_DURATION,
+          ease: SLIDE_EASE,
+        },
+        'slide'
+      )
       tl.fromTo(
         letters,
         { autoAlpha: 0, x: 48 },
-        { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }
+        {
+          autoAlpha: DESKTOP_FINAL_LETTERS.autoAlpha,
+          x: DESKTOP_FINAL_LETTERS.x,
+          duration: SLIDE_DURATION,
+          ease: SLIDE_EASE,
+        },
+        'slide'
+      )
+      tl.fromTo(
+        cluster,
+        { x: 0 },
+        {
+          x: desktopClusterShift,
+          duration: SLIDE_DURATION,
+          ease: SLIDE_EASE,
+        },
+        'slide'
       )
     } else {
-      tl.to(sunflowerStage, { scale: 0.92, duration: 0.4, ease: 'power2.out' }, '+=0')
+      tl.add('slide')
+      tl.to(
+        sunflowerStage,
+        { scale: 0.92, duration: SLIDE_DURATION, ease: SLIDE_EASE },
+        'slide'
+      )
       tl.fromTo(
         letters,
         { autoAlpha: 0, y: 20 },
-        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: SLIDE_DURATION,
+          ease: SLIDE_EASE,
+        },
+        'slide'
       )
     }
 
@@ -138,15 +197,10 @@ export default function Preloader({ onFinish }: PreloaderProps) {
       aria-live="polite"
       aria-busy="true"
     >
-      {/* Десктоп: без max-width у stage — как в оригинале, кластер центрируется целиком */}
       <div
         ref={stageRef}
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-4 sm:px-6 md:px-6"
       >
-        {/*
-          Mobile: flex-колонка. md+: display:contents — подсолнух и буквы снова прямые дети
-          relative inline-block кластера (как раньше на десктопе).
-        */}
         <div ref={clusterRef} className="relative inline-block">
           <div className="flex flex-col items-center gap-6 md:contents">
             <div
@@ -185,11 +239,10 @@ export default function Preloader({ onFinish }: PreloaderProps) {
               </div>
             </div>
 
-            {/* Mobile: блок в потоке под подсолнухом. Desktop: absolute как в оригинале */}
             <div className="relative w-full max-w-[min(100%,20rem)] md:absolute md:left-[calc(100%-20px)] md:top-1/2 md:w-auto md:max-w-none md:-translate-y-1/2 md:pl-[10px]">
               <div
                 ref={lettersRef}
-                className="flex translate-x-0 flex-wrap justify-center gap-0.5 font-display text-3xl font-extrabold tracking-tight text-white opacity-0 sm:text-4xl md:translate-x-[48px] md:flex-nowrap md:justify-start md:text-6xl"
+                className="flex translate-x-0 flex-wrap justify-center gap-0.5 font-display text-3xl font-extrabold tracking-tight text-white opacity-0 sm:text-4xl md:flex-nowrap md:justify-start md:text-6xl"
               >
                 {['O', 'B', 'U', '\u00a0', 'U', 'A'].map((letter, i) => (
                   <span

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { NAV_ITEMS, SITE_NAME, SITE_TAGLINE } from '@/lib/constants'
+import { JOIN_COMMUNITY_URL, NAV_ITEMS, SITE_NAME, SITE_TAGLINE } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { useScroll } from '@/hooks/useScroll'
 import { Logo } from '@/components/ui/Logo'
@@ -100,7 +100,13 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
-            <ButtonLink href="/community" variant="primary" className="px-5 py-2.5 text-sm">
+            <ButtonLink
+              href={JOIN_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="primary"
+              className="px-5 py-2.5 text-sm"
+            >
               Join Community
             </ButtonLink>
           </div>
@@ -167,7 +173,14 @@ export function Navbar() {
             </nav>
 
             <div className="border-t border-neutral-100 p-4">
-              <ButtonLink href="/community" variant="primary" className="w-full justify-center py-3.5 text-sm" onClick={closeMenu}>
+              <ButtonLink
+                href={JOIN_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                className="w-full justify-center py-3.5 text-sm"
+                onClick={closeMenu}
+              >
                 Join Community
               </ButtonLink>
             </div>

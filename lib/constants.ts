@@ -1,6 +1,10 @@
 export const SITE_NAME = 'OBU UA'
 export const SITE_TAGLINE = 'Oxford Brookes Ukrainian Society'
 
+/** Brookes Union — страница Ukrainian Society (основной «Join») */
+export const JOIN_COMMUNITY_URL =
+  'https://brookesunion.com/societies/Ukrainian_Society'
+
 export type NavItem = { href: string; label: string }
 
 export const NAV_ITEMS: NavItem[] = [

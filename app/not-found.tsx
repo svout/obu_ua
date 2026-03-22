@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useLayoutEffect, useRef } from 'react'
 import { useFirstLoad } from '@/hooks/useFirstLoad'
 import { gsap, registerGsapPlugins } from '@/lib/gsap'
+import { JOIN_COMMUNITY_URL } from '@/lib/constants'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 
 const PETAL_COUNT = 13
@@ -83,7 +84,12 @@ export default function NotFound() {
               Student Projects
             </Link>
             <span className="text-neutral-300">•</span>
-            <Link href="/community" className="font-semibold text-primary-500 hover:text-primary-600">
+            <Link
+              href={JOIN_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary-500 hover:text-primary-600"
+            >
               Join Community
             </Link>
             <span className="text-neutral-300">•</span>
