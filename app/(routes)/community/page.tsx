@@ -1,11 +1,30 @@
 import Link from 'next/link'
+import {
+  Briefcase,
+  Globe2,
+  GraduationCap,
+  Handshake,
+  Lightbulb,
+  Target,
+  type LucideIcon,
+} from 'lucide-react'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import {
   communityBenefits,
   communitySocials,
   communityTestimonials,
 } from '@/lib/data/community'
+import type { CommunityBenefitIconId } from '@/features/community'
 import { PageHero } from '@/components/sections/PageHero'
+
+const benefitIcons: Record<CommunityBenefitIconId, LucideIcon> = {
+  academic: GraduationCap,
+  networking: Handshake,
+  cultural: Globe2,
+  career: Briefcase,
+  projects: Lightbulb,
+  growth: Target,
+}
 
 export default function CommunityPage() {
   return (
@@ -25,20 +44,23 @@ export default function CommunityPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {communityBenefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="group rounded-2xl border border-neutral-200 bg-gradient-to-br from-white to-neutral-50 p-8 shadow-lg transition-all duration-300 hover:border-primary-300"
-              >
-                <div className="mb-4 text-5xl transition-transform duration-300 group-hover:scale-110">
-                  {benefit.icon}
+            {communityBenefits.map((benefit) => {
+              const Icon = benefitIcons[benefit.icon]
+              return (
+                <div
+                  key={benefit.title}
+                  className="group rounded-2xl border border-neutral-200 bg-gradient-to-br from-white to-neutral-50 p-8 shadow-lg transition-all duration-300 hover:border-primary-300"
+                >
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-800 transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-8 w-8" strokeWidth={1.75} aria-hidden />
+                  </div>
+                  <h3 className="font-display mb-3 text-xl font-bold transition-colors group-hover:text-primary-500">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-neutral-600">{benefit.description}</p>
                 </div>
-                <h3 className="font-display mb-3 text-xl font-bold transition-colors group-hover:text-primary-500">
-                  {benefit.title}
-                </h3>
-                <p className="text-neutral-600">{benefit.description}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

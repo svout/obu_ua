@@ -17,24 +17,27 @@ export type ContentItem = {
 
 export const contentItems: ContentItem[] = [
   {
-    id: 'ukrainian-culture-night-2025',
-    title: 'Ukrainian Culture Night 2025',
+    id: 'rally-for-peace-oxford-2026',
+    title: 'Rally for Peace in Oxford',
     type: 'event',
-    date: '2025-04-18',
+    date: '2026-02-22',
     description:
-      'An evening of live music, dance, and traditional food celebrating Ukrainian heritage with the Brookes community.',
-    content: `Our flagship cultural evening returns to the Main Hall. The programme includes performances by student musicians, a short workshop on regional folk dance, and a shared meal with dishes contributed by members and local partners.
-
-Doors open at 17:30 for refreshments; the formal programme runs from 18:15 to 21:00. We will also share information about volunteering for upcoming outreach activities.
-
-Accessibility: step-free access via the east entrance; please email us if you need reserved seating.`,
-    images: [
-      'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200',
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200',
-    ],
-    tags: ['Culture', 'Community', 'Evening'],
-    location: 'Main Hall, Oxford Brookes University',
-    featured: true,
+      'Marking 4 years since the full-scale invasion, members of the Oxford Brookes Ukrainian Society joined a city-wide rally to stand in solidarity with Ukraine and call for continued international support.',
+    content: `Today marks 4 years since the full-scale invasion, and 12 years since the beginning of Russian aggression in Ukraine.
+  
+  On Sunday 22nd February, the Oxford Brookes Ukrainian Society took part in the Rally for Peace in Oxford. Standing in Radcliffe Square alongside partner organisations and supporters, we gathered with one clear goal: to show that Ukraine stands strong.
+  
+  This was not only a moment of remembrance, but a call to action. Each passing year reinforces how vital continued international support remains — for those defending Europe's security, for civilians affected by the war, and for those working tirelessly to save lives.
+  
+  Our Secretary, Yaroslav Kryvoshyia, spoke on behalf of the society, sharing his personal experience of the beginning of the war and his recent return to Ukraine. He described feeling a mixture of "fear, pride, and pain at the same time" — emotions that reflect the daily reality for millions.
+  
+  We extend our deepest gratitude to everyone who stood with us.
+  
+  Slava Ukraini.`,
+    images: ['/images/event1.jpeg', '/images/event2.jpeg'],
+    tags: ['Advocacy', 'Solidarity', 'Ukraine', 'Community'],
+    location: 'Radcliffe Square, Oxford',
+    featured: true
   },
   {
     id: 'society-wins-student-group-award',
@@ -48,118 +51,170 @@ Accessibility: step-free access via the east entrance; please email us if you ne
 The judges highlighted our peer-support initiatives, cultural programming, and collaboration with other societies on campus-wide events. This recognition belongs to every member who volunteered, attended, or helped spread the word.
 
 Thank you to our committee, faculty supporters, and partners who made this possible. We will use the award grant to fund two additional workshops this term.`,
-    images: ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200'],
+    images: [
+      '/images/event3.jpeg',
+      '/images/event4.jpeg',
+      '/images/event5.jpeg',
+      '/images/event6.jpeg',
+    ],
     tags: ['Award', 'Students’ Union', 'Recognition'],
     location: 'Oxford Brookes University',
   },
   {
-    id: 'networking-brussels-spring-2025',
-    title: 'Networking evening: Ukrainian professionals in the UK',
+    id: 'interuniversity-ukrainian-societies-meet-2025',
+    title: 'Inter-University Ukrainian Societies Meet',
     type: 'event',
-    date: '2025-02-20',
+    date: '2025-03-30',
     description:
-      'Structured networking with alumni and guests from tech, policy, and non-profit sectors.',
-    content: `We hosted an evening of roundtable introductions and open networking in the Innovation Lab. Guests included alumni now working in London and Oxford, and representatives from two charities supporting education partnerships.
-
-The format was simple: short sector-based tables for the first hour, then open mingling. Several members secured follow-up coffee chats and one internship conversation is already in progress.
-
-Slides and a contact sheet (opt-in) were shared with attendees after the event.`,
-    images: ['https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200'],
-    tags: ['Careers', 'Networking'],
-    location: 'Innovation Lab, Headington Campus',
+      'Oxford Brookes Ukrainian Society hosted over 50 student leaders from across the UK, strengthening collaboration and building a unified network of Ukrainian student initiatives.',
+    content: `On 30 March 2025, we hosted representatives from the University of Bristol Ukrainian Society and the University of the West of England (UWE) Ukrainian Society at Oxford Brookes University.
+  
+  Bringing together over 50 student representatives, the event created a platform for meaningful exchange, coordination, and long-term collaboration between Ukrainian societies across institutions.
+  
+  In partnership with Igor Radchenko and Alina Tarasova, Presidents of the Bristol and UWE Ukrainian Societies, we delivered a programme designed to move beyond introductions and into active dialogue. This included a welcome reception, collaborative workshops, and structured discussions encouraging critical thinking and diverse perspectives.
+  
+  This initiative reflects a broader goal: building a connected and resilient student network capable of amplifying Ukrainian voices, supporting community initiatives, and increasing collective impact across the UK.
+  
+  We extend our thanks to everyone involved in organising and supporting the event, and look forward to developing deeper collaborations in the future.`,
+    images: [
+      '/images/bristol1.jpeg',
+      '/images/bristol2.jpeg',
+      '/images/bristol3.jpeg',
+      '/images/bristol4.jpeg',
+    ],
+    tags: ['Collaboration', 'Networking', 'Leadership', 'Community'],
+    location: 'Oxford Brookes University, Oxford',
+    featured: false
   },
   {
-    id: 'humanitarian-fundraiser-results',
-    title: 'Winter fundraiser: results and thank-you',
-    type: 'announcement',
-    date: '2025-01-28',
-    description:
-      'Together we raised over £4,200 for humanitarian aid; here is how funds were allocated.',
-    content: `Thank you to everyone who donated time, raffle prizes, or money during our winter fundraiser.
-
-Totals exceeded our goal. Allocation: 60% to medical supplies via our partner NGO, 25% to educational kits, 15% reserved for local emergency support for students in hardship.
-
-A full receipt summary is available on request from the committee. Planning for the spring solidarity market is already underway—watch this space.`,
-    tags: ['Fundraising', 'Community'],
-    location: 'Oxford Brookes University',
-  },
-  {
-    id: 'community-picnic-may-2025',
-    title: 'Community picnic & welcome afternoon',
+    id: 'cambridge-ukrainian-formal-dinner-2025',
+    title: 'Cambridge Ukrainian Formal Dinner',
     type: 'event',
-    date: '2025-05-10',
+    date: '2025-03-14',
     description:
-      'Outdoor welcome event for new members with games, snacks, and society onboarding.',
-    content: `We will meet at University Park (south lawn, near the oak grove) from 12:00 to 16:00. Bring a blanket; we will provide water, fruit, and a limited number of sandwiches. Feel free to bring a dish to share.
-
-Committee members will run a short welcome session at 13:00 covering how to join working groups, Discord, and our buddy scheme for new arrivals.
-
-Rain plan: we will relocate to the Student Union ground-floor social space—check Instagram stories on the day.`,
-    images: ['https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200'],
-    tags: ['Social', 'Outdoors', 'Welcome'],
-    location: 'University Park, Oxford Brookes',
+      'Oxford Brookes Ukrainian Society joined leading Ukrainian student organisations from across the UK at Cambridge, strengthening inter-university ties and expanding national collaboration.',
+    content: `On 14 March 2025, representatives of the Oxford Brookes Ukrainian Society attended the Cambridge University Ukrainian Society’s Second Annual Ukrainian Formal Dinner at Churchill College, University of Cambridge.
+  
+  The event brought together over 60 guests, including student leaders, academics, and representatives of Ukrainian societies from across the UK. Alongside peers from Oxford, Nottingham, and national organisations, the evening provided an important space for connection, dialogue, and strengthening inter-university relationships.
+  
+  Our participation reflects a continued commitment to building a coordinated and active Ukrainian student network across the UK — one that fosters collaboration, shares resources, and amplifies collective impact.
+  
+  We extend our sincere thanks to the Cambridge University Ukrainian Society for their invitation and excellent organisation of the evening.
+  
+  We also congratulate Ivan Taran on his election as Chairman of the Ukrainian Students Union and look forward to working together in the year ahead.
+  
+  We remain focused on deepening partnerships and contributing to a stronger, more connected community.`,
+    images: [
+      '/images/cambridge2.jpeg',
+      '/images/cambridge1.jpeg',
+      '/images/cambridge3.jpeg',
+    ],
+    tags: ['Collaboration', 'Networking', 'Leadership', 'Community'],
+    location: 'Churchill College, University of Cambridge',
+    featured: false
   },
   {
-    id: 'library-study-sessions',
-    title: 'Weekly co-working: Headington library',
-    type: 'announcement',
-    date: '2025-01-15',
-    description:
-      'Informal co-working every Wednesday afternoon—no signup required.',
-    content: `Starting this term, members meet on Level 2 of the Headington library every Wednesday from 14:00 to 17:00. Look for the small OBU UA card on the table.
-
-This is not a formal workshop—just focused time alongside friends. Anyone is welcome, including students who are not yet members.
-
-If the table is full, we sometimes spill to the café; check the society WhatsApp for the day-of pin.`,
-    tags: ['Study', 'Weekly'],
-    location: 'Headington Library, Level 2',
-  },
-  {
-    id: 'film-screening-ukrainian-cinema',
-    title: 'Film screening: contemporary Ukrainian cinema',
+    id: 'oxford-peace-rally-fundraising-2025',
+    title: 'Oxford Peace Rally & Fundraising for Ukraine',
     type: 'event',
-    date: '2024-11-08',
+    date: '2025-02-23',
     description:
-      'Screening followed by Q&A with a guest speaker on documentary storytelling.',
-    content: `We screened a recent Ukrainian documentary and hosted a thirty-minute Q&A on ethics and production constraints in conflict reporting.
-
-Attendance was capped at 80; we are exploring a repeat screening next term with open captions for a wider audience.
-
-Thanks to the Film Society for technical support and to our guest for joining remotely.`,
-    images: ['https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200'],
-    tags: ['Film', 'Culture'],
-    location: 'Cinema Hall, Oxford Brookes',
+      'Marking the third anniversary of the full-scale invasion, the society contributed to a city-wide rally and helped raise over £1,000 in under a week to support rescue vehicle deliveries to Ukraine.',
+    content: `On 23 February 2025, members of the Oxford Brookes Ukrainian Society took part in a Ukrainian Peace Rally in Oxford, marking the third anniversary of the full-scale Russian invasion.
+  
+  In collaboration with partner organisations and local initiatives, the rally served both as a moment of solidarity and a platform for action. Alongside the event and a film screening organised by our society, we supported fundraising efforts for “Driving Ukraine” — a student-led initiative delivering rescue vehicles to Ukraine.
+  
+  Through these combined efforts, over £1,000 was raised in less than a week, directly contributing to life-saving support on the ground.
+  
+  Our President, Nina Shestakova, выступила as one of the main speakers, sharing her personal story and reinforcing the importance of resilience, unity, and continued international attention. Members of the society also took part in interviews, representing the voice and experience of Ukrainians within the UK.
+  
+  This initiative reflects our ongoing commitment not only to raising awareness, but to delivering tangible impact.
+  
+  We thank everyone who contributed, supported, and stood with Ukraine.
+  
+  Slava Ukraini.`,
+    images: [
+      '/images/medical1.jpeg',
+      '/images/medical2.jpeg',
+      '/images/medical3.jpeg',
+      '/images/medical4.jpeg',
+    ],
+    tags: ['Fundraising', 'Advocacy', 'Solidarity', 'Impact'],
+    location: 'Oxford, United Kingdom',
+    featured: true
   },
   {
-    id: 'research-collaboration-oxford-hub',
-    title: 'Partnership signed with Oxford Hub for youth programmes',
-    type: 'achievement',
-    date: '2024-10-22',
-    description:
-      'A formal collaboration to co-design two mentorship weekends for sixth-form students.',
-    content: `Committee leads met with Oxford Hub trustees to sign a memorandum of understanding. Over the next academic year we will co-deliver two mentorship weekends focusing on university applications and confidence building.
-
-OBU UA members can volunteer as mentors; training will be provided in late November.
-
-This partnership does not replace our existing SU activities—it extends our reach into regional schools.`,
-    tags: ['Partnership', 'Education'],
-    location: 'Oxford',
-  },
-  {
-    id: 'tech-workshop-startup-basics',
-    title: 'Workshop: from idea to MVP',
+    id: 'ukrainian-societies-summit-2024',
+    title: 'Ukrainian Societies Summit 2024',
     type: 'event',
-    date: '2024-09-14',
+    date: '2024-11-24',
     description:
-      'Hands-on session on lean validation and pitching, led by society alumni.',
-    content: `Alumni founders walked through problem interviews, landing-page tests, and a five-slide pitch structure. Teams formed ad hoc and presented lightning pitches at the end.
-
-Resources (Miro board and reading list) were shared by email to participants.
-
-We plan a follow-up session on fundraising and grant writing in Hilary term.`,
-    images: ['https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200'],
-    tags: ['Workshop', 'Startups'],
-    location: 'Business School, Oxford Brookes',
+      'Oxford Brookes Ukrainian Society participated in a national summit bringing together Ukrainian student leaders, institutional partners, and senior representatives of Ukraine in the UK.',
+    content: `On 24 November 2024, representatives of the Oxford Brookes Ukrainian Society attended the 3rd Summit of Ukrainian Societies, organised by the Ukrainian Students Union and hosted at the University of the West of England.
+  
+  The summit convened student leaders from across the UK, creating a platform for coordination, knowledge exchange, and the development of joint initiatives within the Ukrainian student network.
+  
+  The programme included contributions from key figures supporting Ukraine internationally. Volodymyr Sterenchuk, CEO of Nova Poshta UK, shared insights into the company’s operations and its role in maintaining critical logistics links with Ukraine during wartime.
+  
+  Participants also heard from Valerii Zaluzhnyi, Ambassador of Ukraine to the United Kingdom and former Commander-in-Chief of the Armed Forces of Ukraine. His address, delivered remotely, provided a strategic perspective on Ukraine’s position and reinforced the importance of sustained international engagement.
+  
+  Beyond the formal programme, the summit enabled direct collaboration between societies, leading to the development of new partnerships and future joint initiatives.
+  
+  Our participation reflects an ongoing commitment to contributing to a coordinated, effective, and nationally connected Ukrainian student movement in the UK.`,
+    images: [
+      '/images/summit1.jpeg',
+      '/images/summit2.jpeg',
+    ],
+    tags: ['Leadership', 'Networking', 'Collaboration', 'Strategy'],
+    location: 'University of the West of England, Bristol',
+    featured: true
+  },
+  {
+    id: 'zaluzhnyi-kcl-conversation-2024',
+    title: 'Discussion with Ambassador Valerii Zaluzhnyi',
+    type: 'event',
+    date: '2024-10-03',
+    description:
+      'Members of the Oxford Brookes Ukrainian Society joined a high-level discussion with Ambassador Valerii Zaluzhnyi, engaging with strategic perspectives on Ukraine’s war effort and future development.',
+    content: `On 3 October 2024, members of the Oxford Brookes Ukrainian Society attended a discussion with Valerii Zaluzhnyi, Ambassador of Ukraine to the United Kingdom and former Commander-in-Chief of the Armed Forces of Ukraine. The event was hosted by the KCL Ukrainian Society.
+  
+  As one of the largest events attended by our members since the society’s foundation, the discussion provided direct insight into Ukraine’s strategic situation and long-term outlook.
+  
+  Key topics included wartime strategy, Ukraine’s economic and investment prospects, and the role of Ukrainian students studying abroad in shaping the country’s future.
+  
+  Our participation reflects a continued effort to engage with high-level perspectives and bring these insights back into our community, strengthening both our internal direction and external impact.
+  
+  We thank the organisers for facilitating this opportunity and look forward to building on the connections and insights gained.`,
+    images: [
+      '/images/kcl1.jpeg',
+      '/images/kcl2.jpeg',
+    ],
+    tags: ['Leadership', 'Strategy', 'Networking', 'Community'],
+    location: 'King’s College London, London',
+    featured: true
+  },
+  {
+    id: 'ukrainian-students-union-partnership-2024',
+    title: 'Partnership with Ukrainian Students Union',
+    type: 'event',
+    date: '2024-09-21',
+    description:
+      'Oxford Brookes Ukrainian Society formally joined the Ukrainian Students Union, becoming part of a national network of over 40 Ukrainian societies across the UK.',
+    content: `On 21 September 2024, the Oxford Brookes Ukrainian Society formalised its partnership with the Ukrainian Students Union, marking a key step in the society’s development and national integration.
+  
+  By joining the Union, we became part of a coordinated network of over 40 Ukrainian societies across universities in the United Kingdom. This partnership provides a foundation for structured collaboration, shared initiatives, and stronger collective representation.
+  
+  Through this alignment, the society gains access to support in organising events, promoting Ukrainian culture, and expanding connections between students, scholars, and professionals across the UK.
+  
+  This milestone reflects a transition from an independent student group to an active contributor within a broader national movement, strengthening both our capacity and long-term impact.
+  
+  We look forward to building a productive and sustained collaboration in the years ahead.`,
+    images: [
+      '/images/usu1.jpeg',
+    ],
+    tags: ['Partnership', 'Leadership', 'Network', 'Growth'],
+    location: 'United Kingdom',
+    featured: true
   },
 ]
 

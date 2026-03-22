@@ -57,7 +57,7 @@ export function AboutTimeline({ items }: AboutTimelineProps) {
 
           {list.map((item, index) => (
             <div
-              key={item.year}
+              key={item.id}
               className={`about-timeline-item relative mb-12 flex items-center ${
                 index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
               }`}

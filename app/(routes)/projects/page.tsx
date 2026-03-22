@@ -1,3 +1,4 @@
+import { Briefcase, Target, UsersRound } from 'lucide-react'
 import { PageHero } from '@/components/sections/PageHero'
 import { Container } from '@/components/layout/Container'
 import { ProjectsExplorer } from '@/features/projects/ProjectsExplorer'
@@ -16,22 +17,28 @@ export default function ProjectsPage() {
         <Container>
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <div className="mb-3 text-5xl" aria-hidden>
-                💼
+              <div className="mb-4 flex justify-center" aria-hidden>
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-800">
+                  <Briefcase className="h-8 w-8" strokeWidth={1.75} />
+                </span>
               </div>
               <div className="font-display mb-2 text-4xl font-bold gradient-text">23</div>
               <div className="text-neutral-600">Active Projects</div>
             </div>
             <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <div className="mb-3 text-5xl" aria-hidden>
-                👥
+              <div className="mb-4 flex justify-center" aria-hidden>
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-800">
+                  <UsersRound className="h-8 w-8" strokeWidth={1.75} />
+                </span>
               </div>
               <div className="font-display mb-2 text-4xl font-bold gradient-text">87</div>
               <div className="text-neutral-600">Contributors</div>
             </div>
             <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <div className="mb-3 text-5xl" aria-hidden>
-                🎯
+              <div className="mb-4 flex justify-center" aria-hidden>
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-800">
+                  <Target className="h-8 w-8" strokeWidth={1.75} />
+                </span>
               </div>
               <div className="font-display mb-2 text-4xl font-bold gradient-text">12</div>
               <div className="text-neutral-600">Launched Startups</div>

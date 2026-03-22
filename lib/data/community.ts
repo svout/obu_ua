@@ -6,36 +6,36 @@ import type {
 
 export const communityBenefits: CommunityBenefit[] = [
   {
-    icon: '🎓',
+    icon: 'academic',
     title: 'Academic Excellence',
     description:
       'Access peer tutoring, study groups, and academic resources to excel in your courses.',
   },
   {
-    icon: '🤝',
+    icon: 'networking',
     title: 'Networking',
     description:
       'Connect with fellow students, alumni, and professionals in your field of interest.',
   },
   {
-    icon: '🌍',
+    icon: 'cultural',
     title: 'Cultural Events',
     description:
       'Celebrate Ukrainian traditions through festivals, concerts, and cultural gatherings.',
   },
   {
-    icon: '💼',
+    icon: 'career',
     title: 'Career Support',
     description:
       'Get help with CVs, interview prep, and access to exclusive job opportunities.',
   },
   {
-    icon: '💡',
+    icon: 'projects',
     title: 'Project Collaboration',
     description: 'Find teammates for your startup ideas and research projects.',
   },
   {
-    icon: '🎯',
+    icon: 'growth',
     title: 'Personal Growth',
     description: 'Develop leadership skills through committee roles and event organization.',
   },

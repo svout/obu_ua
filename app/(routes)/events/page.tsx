@@ -2,8 +2,8 @@ import { ContentCard } from '@/components/content/ContentCard'
 import { ContentFilters } from '@/components/content/ContentFilters'
 import { ContentHeader } from '@/components/content/ContentHeader'
 import { ContentList } from '@/components/content/ContentList'
-import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
+import { ProposeEventSection } from '@/components/events/ProposeEventSection'
 import {
   getContentFeed,
   getFeaturedContent,
@@ -54,19 +54,7 @@ export default async function EventsPage({ searchParams }: EventsPageProps) {
         </Container>
       </section>
 
-      <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-900 to-primary-950 text-primary-100">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <h2 className="font-display text-primary-100 mb-6 text-4xl font-bold md:text-5xl">
-            Want to organise an event?
-          </h2>
-          <p className="mb-8 text-xl text-white">
-            Have an idea for the community? We&apos;d love to hear from you.
-          </p>
-          <Button type="button" variant="primary" className="bg-white text-primary-900 shadow-xl">
-            Propose an event
-          </Button>
-        </div>
-      </section>
+      <ProposeEventSection />
     </div>
   )
 }

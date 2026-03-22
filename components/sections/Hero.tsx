@@ -184,25 +184,17 @@ export default function Hero() {
           <div className="relative order-2 lg:order-none">
             <div
               ref={imageRef}
-              className={`group aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500 hover:shadow-3xl ${imageInit}`}
+              className={`group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-500 hover:shadow-3xl ${imageInit}`}
             >
-              <div className="relative flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-100 via-accent-100 to-primary-200">
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2 2-2 2-2-2zM0 30l2 2-2 2-2-2zM60 30l-2 2 2 2 2-2zM30 60l-2-2 2-2 2 2z' fill='%230066ff' fill-opacity='0.4'/%3E%3C/svg%3E")`,
-                    backgroundSize: '60px 60px',
-                  }}
-                />
-
-                <div className="z-10 px-4 text-center sm:px-6">
-                  <div className="mb-3 transform text-5xl transition-transform duration-500 group-hover:scale-110 sm:mb-4 sm:text-6xl md:text-7xl">
-                    🌻
-                  </div>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              </div>
+              <Image
+                src="/images/event1.jpeg"
+                alt="Oxford Brookes Ukrainian Society members with Ukrainian flags at Radcliffe Square, Oxford"
+                fill
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary-900/25 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
 
             <div className="absolute -bottom-6 -right-6 -z-10 h-20 w-20 rounded-full bg-accent-400 opacity-20 blur-2xl sm:h-24 sm:w-24" />

@@ -1,5 +1,14 @@
+/** Lucide icon id for benefit cards — mapped in the community page */
+export type CommunityBenefitIconId =
+  | 'academic'
+  | 'networking'
+  | 'cultural'
+  | 'career'
+  | 'projects'
+  | 'growth'
+
 export type CommunityBenefit = {
-  icon: string
+  icon: CommunityBenefitIconId
   title: string
   description: string
 }
