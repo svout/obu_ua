@@ -6,6 +6,7 @@ import { IconByName } from '@/components/ui/IconByName'
 import { useGsapContext } from '@/hooks/useAnimation'
 import { useFirstLoad } from '@/hooks/useFirstLoad'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
+import { isMobileViewport, prefersReducedMotion } from '@/lib/viewport'
 import type { HomeStat } from '@/lib/data/home'
 
 const EMPTY_STATS: HomeStat[] = []
@@ -61,15 +62,16 @@ export function Stats({ stats }: StatsProps) {
         onEnter: runCounters,
       })
 
+      const light = isMobileViewport() || prefersReducedMotion()
       gsap.fromTo(
         '.home-stat-card',
-        { autoAlpha: 0, y: 24 },
+        { autoAlpha: 0, y: light ? 14 : 24 },
         {
           autoAlpha: 1,
           y: 0,
-          duration: 0.55,
-          stagger: 0.08,
-          ease: 'back.out(1.4)',
+          duration: light ? 0.4 : 0.55,
+          stagger: light ? 0.05 : 0.08,
+          ease: light ? 'power2.out' : 'back.out(1.4)',
           immediateRender: false,
           scrollTrigger: {
             trigger,
@@ -86,14 +88,14 @@ export function Stats({ stats }: StatsProps) {
 
   return (
     <section ref={sectionRef} className="section-padding bg-surface">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Community"
           highlight="by Numbers"
           description="Growing stronger together, one connection at a time"
         />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           {data.map((stat, index) => (
             <div
               key={stat.label}
@@ -103,7 +105,7 @@ export function Stats({ stats }: StatsProps) {
                 <IconByName name={stat.icon} className="h-7 w-7" />
               </div>
 
-              <div className="font-display mb-2 text-4xl font-bold tabular-nums text-primary-900 md:text-5xl">
+              <div className="font-display mb-2 text-3xl font-bold tabular-nums text-primary-900 sm:text-4xl md:text-5xl">
                 <span ref={(el) => { valueRefs.current[index] = el }}>0</span>
                 {stat.suffix ? <span>{stat.suffix}</span> : null}
               </div>

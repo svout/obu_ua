@@ -16,7 +16,7 @@ export function ProjectList({
   const list = projects ?? []
   return (
     <div
-      className={cn('grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3', className)}
+      className={cn('grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3', className)}
     >
       {list.map((project) => (
         <div key={project.id} className={itemWrapperClassName}>

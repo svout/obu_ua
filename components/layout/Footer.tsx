@@ -21,14 +21,14 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="pattern-bg border-t border-neutral-200 bg-neutral-900 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+    <footer className="pattern-bg border-t bg-white text-neutral-900">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 md:py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="mb-5">
-              <Logo title={SITE_NAME} subtitle={SITE_TAGLINE} size="md" inverted />
+              <Logo title={SITE_NAME} subtitle={SITE_TAGLINE} size="md"/>
             </div>
-            <p className="mb-6 max-w-md text-sm leading-relaxed text-neutral-400">
+            <p className="mb-6 max-w-md text-sm leading-relaxed text-neutral-900">
               Building a vibrant community of Ukrainian students at Oxford Brookes University.
               Connect, collaborate, and celebrate our culture together.
             </p>
@@ -39,17 +39,17 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:scale-105 hover:bg-primary-700"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-neutral-200 text-neutral-900 transition-all hover:scale-105 hover:bg-primary-700"
                   aria-label={name}
                 >
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5 text-neutral-900" strokeWidth={1.75} />
                 </a>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-neutral-400">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-neutral-900">
               Quick Links
             </h3>
             <ul className="space-y-2.5">
@@ -57,7 +57,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-300 transition-colors hover:text-accent-400"
+                    className="text-sm text-neutral-900 transition-colors hover:text-primary-700"
                   >
                     {link.label}
                   </Link>
@@ -67,14 +67,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-neutral-400">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-neutral-900">
               Get in Touch
             </h3>
-            <ul className="space-y-3 text-sm text-neutral-400">
+            <ul className="space-y-3 text-sm text-neutral-900">
               <li>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="transition-colors hover:text-accent-400"
+                  className="transition-colors hover:text-primary-700"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -88,7 +88,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-neutral-500 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 text-sm text-neutral-900 md:flex-row">
           <p suppressHydrationWarning>
             © {year} Oxford Brookes Ukrainian Society. All rights reserved.
           </p>

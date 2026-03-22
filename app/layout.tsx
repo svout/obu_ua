@@ -24,7 +24,7 @@ export default function RootLayout({
           <div id="site-shell" className="flex min-h-screen flex-col bg-surface-muted">
             <div className="grain-overlay" aria-hidden />
             <Navbar />
-            <main className="relative z-10 flex-1">{children}</main>
+            <main className="relative z-10 flex-1 overflow-x-hidden">{children}</main>
             <Footer />
           </div>
         </AppBoot>
