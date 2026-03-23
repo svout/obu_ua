@@ -159,7 +159,7 @@ export default function Hero() {
                 href={JOIN_COMMUNITY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-block"
+                className="w-full sm:w-auto"
               >
                 <button
                   type="button"
@@ -169,7 +169,7 @@ export default function Hero() {
                   <UsersRound className="ml-2 h-5 w-5 shrink-0 opacity-95" strokeWidth={2} aria-hidden />
                 </button>
               </Link>
-              <Link href="/events" className="w-full sm:w-auto">
+              <Link href="/events" className="hidden md:inline-block">
                 <button
                   type="button"
                   className={`cta-button btn-secondary w-full px-6 py-3.5 text-base sm:w-auto sm:px-8 sm:py-4 sm:text-lg ${ctaInit}`}

@@ -61,7 +61,7 @@ export function ProjectsPreview() {
           <ButtonLink
             href="/projects"
             variant="secondary"
-            className="hidden px-8 py-3 text-sm md:inline-flex md:w-auto"
+            className="!hidden px-8 py-3 text-sm md:inline-flex md:w-auto"
           >
             Explore Projects
           </ButtonLink>

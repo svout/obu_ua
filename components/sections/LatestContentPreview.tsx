@@ -63,7 +63,7 @@ export function LatestContentPreview({ items }: LatestContentPreviewProps) {
           <ButtonLink
             href="/events"
             variant="secondary"
-            className="hidden px-8 py-3 text-sm md:inline-flex md:w-auto"
+            className="!hidden px-8 py-3 text-sm md:!inline-flex md:w-auto"
           >
             View all
           </ButtonLink>
