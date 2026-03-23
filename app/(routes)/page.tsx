@@ -17,7 +17,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Stats stats={homeStats} />
       <WhatWeDo cards={whatWeDoCards} />
       <LatestContentPreview items={latestContent} />
       <ProjectsPreview projects={homeFeaturedProjects} />
