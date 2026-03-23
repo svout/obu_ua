@@ -4,19 +4,15 @@ import { useRef } from 'react'
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Container } from '@/components/layout/Container'
 import { ProjectList } from '@/features/projects/ProjectList'
-import type { ProjectSummary } from '@/features/projects/types'
 import { useGsapContext } from '@/hooks/useAnimation'
 import { useFirstLoad } from '@/hooks/useFirstLoad'
 import { gsap } from '@/lib/gsap'
+import { allProjects } from '@/lib/data/projects'
 import { isMobileViewport, prefersReducedMotion } from '@/lib/viewport'
 
-export type ProjectsPreviewProps = {
-  projects: ProjectSummary[]
-}
-
-export function ProjectsPreview({ projects }: ProjectsPreviewProps) {
+export function ProjectsPreview() {
   const sectionRef = useRef<HTMLElement>(null)
-  const list = projects ?? []
+  const list = allProjects
   const { isFirstLoad } = useFirstLoad()
 
   useGsapContext(
