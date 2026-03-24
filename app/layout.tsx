@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     'Join Oxford Brookes vibrant Ukrainian community. Connect, collaborate, and celebrate our culture together.',
   keywords: ['Oxford Brookes', 'Ukrainian Society', 'Student Community', 'OBU', 'Ukraine'],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
