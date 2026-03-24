@@ -66,10 +66,6 @@ export default function ContactPage() {
                     <span className="text-green-500">✓</span>
                     <span>Telegram: Within 2 hours</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Discord: Real-time chat</span>
-                  </li>
                 </ul>
               </div>
             </div>

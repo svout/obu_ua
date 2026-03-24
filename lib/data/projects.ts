@@ -14,6 +14,10 @@ export const allProjects: ProjectSummary[] = [
     lookingForTeam: false,
     likes: 0,
     images: ['/images/projects/kombuba1.png', '/images/projects/kombuba2.png'],
+    contributors: ['Nazarii Husar'],
+    ownerRole: 'Strategy Analyst',
+    contactEmail: 'nazarii.husar@obu-ua.com',
+    contactTelegram: '@nazarii_husar',
   },
   {
     id: '2',
@@ -28,6 +32,10 @@ export const allProjects: ProjectSummary[] = [
     lookingForTeam: false,
     likes: 0,
     images: ['/images/projects/ai-pm1.png', '/images/projects/ai-pm2.png', '/images/projects/ai-pm3.png', '/images/projects/ai-pm4.png', '/images/projects/ai-pm5.png', '/images/projects/ai-pm6.png'],
+    contributors: ['Ivan Kovalchuk'],
+    ownerRole: 'Product Lead',
+    contactEmail: 'ivan.kovalchuk@obu-ua.com',
+    contactTelegram: '@ivankovl',
   },
 
   {
@@ -43,6 +51,10 @@ export const allProjects: ProjectSummary[] = [
   lookingForTeam: true,
   likes: 0,
   images: ['/images/projects/uni-app.png', '/images/projects/uni-app1.png', '/images/projects/uni-app2.png', '/images/projects/uni-app3.png', '/images/projects/uni-app4.png', '/images/projects/uni-app5.png'],
+  contributors: ['Ivan Kovalchuk'],
+  ownerRole: 'Founder',
+  contactEmail: 'ivan.kovalchuk@obu-ua.com',
+  contactTelegram: '@ivankovl',
 },
 ]
 

@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                   <Briefcase className="h-8 w-8" strokeWidth={1.75} />
                 </span>
               </div>
-              <div className="font-display mb-2 text-4xl font-bold gradient-text">23</div>
+              <div className="font-display mb-2 text-4xl font-bold gradient-text">{allProjects.length}</div>
               <div className="text-neutral-600">Active Projects</div>
             </div>
             <div className="rounded-2xl bg-white p-8 shadow-lg">
@@ -31,7 +31,9 @@ export default function ProjectsPage() {
                   <UsersRound className="h-8 w-8" strokeWidth={1.75} />
                 </span>
               </div>
-              <div className="font-display mb-2 text-4xl font-bold gradient-text">87</div>
+              <div className="font-display mb-2 text-4xl font-bold gradient-text">
+                {allProjects.flatMap((project) => project.contributors ?? []).length}
+              </div>
               <div className="text-neutral-600">Contributors</div>
             </div>
             <div className="rounded-2xl bg-white p-8 shadow-lg">
@@ -40,7 +42,7 @@ export default function ProjectsPage() {
                   <Target className="h-8 w-8" strokeWidth={1.75} />
                 </span>
               </div>
-              <div className="font-display mb-2 text-4xl font-bold gradient-text">12</div>
+              <div className="font-display mb-2 text-4xl font-bold gradient-text">{allProjects.filter((project) => project.stage === 'Startup').length}</div>
               <div className="text-neutral-600">Launched Startups</div>
             </div>
           </div>

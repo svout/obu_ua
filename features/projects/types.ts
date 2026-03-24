@@ -13,4 +13,8 @@ export type ProjectSummary = {
   tags: string[]
   lookingForTeam?: boolean
   likes?: number
+  contributors?: string[]
+  ownerRole?: string
+  contactEmail?: string
+  contactTelegram?: string
 }

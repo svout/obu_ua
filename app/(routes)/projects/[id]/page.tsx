@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { ArrowLeft, Heart, UsersRound } from 'lucide-react'
+import { ArrowLeft, UsersRound } from 'lucide-react'
+import { ProjectEngagement } from '@/components/projects/ProjectEngagement'
 import { ProjectGallery } from '@/components/projects/ProjectGallery'
 import { Badge } from '@/components/ui/Badge'
 import { Container } from '@/components/layout/Container'
@@ -74,10 +75,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               <span>
                 <span className="font-semibold text-neutral-800">Lead:</span> {project.author}
               </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Heart className="h-4 w-4 text-primary-700/80" strokeWidth={2} aria-hidden />
-                <span className="font-semibold text-neutral-800">{project.likes ?? 0}</span>
-                <span className="text-neutral-500">likes</span>
+              <span>
+                <span className="font-semibold text-neutral-800">Contributors:</span>{' '}
+                {(project.contributors ?? []).length}
               </span>
             </div>
 
